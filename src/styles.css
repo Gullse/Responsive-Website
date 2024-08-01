@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+:root {
+    --primary-background-color: #ffffff; /* Örneğin beyaz */
+    --primary-text-color: #333333; /* Örneğin koyu gri */
+    --primary-hover-background-color: #f0f0f0; /* Örneğin açık gri */
+    --primary-hover-text-color: #000000; /* Örneğin siyah */
+    --badge-background-color: #000000; /* Örneğin mavi */
+    --badge-text-color: #ffffff; /* Örneğin beyaz */
+    --item-background-color: #f8f9fa; /* Örneğin açık gri */
+    --item-highlight-background-color: #000000; /* Örneğin mavi */
+    --item-highlight-text-color: #ffffff; /* Örneğin beyaz */
+}
+

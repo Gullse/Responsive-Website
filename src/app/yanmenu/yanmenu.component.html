@@ -1,0 +1,18 @@
+
+<div class="card flex justify-content-center yanmenu-container">
+    <p-panelMenu [model]="items" styleClass="w-full md:w-20rem" />
+</div>
+
+
+<div class="fixed-button-container">
+    <p-button (onClick)="sidebarVisible = !sidebarVisible" icon="pi pi-plus" class="custom-sidebar-button" />
+</div>
+
+<p-sidebar [(visible)]="sidebarVisible" class="custom-sidebar">
+    <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2">
+
+        </div>
+    </ng-template>
+    <p-panelMenu [model]="items" styleClass="w-full" />
+</p-sidebar>

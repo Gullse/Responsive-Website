@@ -1,0 +1,27 @@
+.p-menubar {
+    background-color: var(--primary-background-color);
+}
+
+.p-menubar .p-menuitem-link {
+    color: var(--primary-text-color);
+}
+
+.p-menubar .p-menuitem-link:hover {
+    background-color: var(--primary-hover-background-color);
+    color: var(--primary-hover-text-color);
+}
+
+.p-badge {
+    background-color: var(--badge-background-color);
+    color: var(--badge-text-color);
+}
+
+.p-menuitem-link {
+    background-color: var(--item-background-color);
+}
+
+.p-menuitem-link.p-highlight {
+    background-color: var(--item-highlight-background-color);
+    color: var(--item-highlight-text-color);
+}
+
