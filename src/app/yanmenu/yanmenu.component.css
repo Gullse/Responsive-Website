@@ -1,53 +1,62 @@
+/* Ana menü container'ı */
 .yanmenu-container {
     position: relative;
-    width: 250px;
-    overflow-y: auto;
-    max-height: 100vh;
-    display: block;
+    width: 250px; /* Yan menünün genişliği */
+    overflow-y: auto; /* Dikey kaydırma */
+    max-height: 100vh; /* Maksimum yükseklik */
+    display: block; /* Varsayılan olarak göster */
 }
 
+/* Ekran boyutu 1024px'in altına düştüğünde yan menüyü gizle */
 @media (max-width: 1024px) {
     .yanmenu-container {
-        display: none;
+        display: none; /* Yan menüyü gizle */
     }
 }
 
+/* Butonu ekranın en üst sağ köşesine yerleştirme */
 .fixed-button-container {
     position: fixed;
-    top: 80px;
-    right: 10px;
-    z-index: 1000;
-    display: none;
+    top: 20px; 
+    right: 250px; 
+    z-index: 1000; 
+    display: none; /* Varsayılan olarak butonu gizle */
 }
 
+/* Ekran boyutu 1024px'in altına düştüğünde butonu göster */
 @media (max-width: 1024px) {
     .fixed-button-container {
-        display: block;
+        display: block; /* Butonu göster */
     }
 }
 
+/* Sidebar içeriği için stil */
 .p-sidebar {
-    overflow-y: auto;
-    width: 560px;
-    max-height: 100vh;
+    overflow-y: auto; /* İçerik sığmadığında dikey kaydırma çubuğu ekler */
+    width: 250px; /* Yan menü genişliği */
+    max-height: 100vh; /* Maksimum yükseklik */
 }
 
+/* Sidebar içerik alanı yüksekliği */
 .p-sidebar .p-sidebar-content {
-    max-height: 80vh;
+    max-height: 80vh; /* Yüksekliği ekranın %80'i kadar yapar, ihtiyaca göre ayarlayabilirsiniz */
 }
 
+/* Sidebar butonunun özel stili */
 .custom-sidebar-button {
-    background-color: #ea1919;
-    color: #ff6363;
-    border: none;
+    background-color: #ffa6a6; /* Butonun arka plan rengini ayarlama */
+    color: #ff6363; /* Metin rengini beyaz yapma */
+    border: none; /* Kenarlıkları kaldırma */
 }
 
+/* Butona fare ile üzerine gelindiğinde stil ekleme */
 .custom-sidebar-button:hover {
-    background-color: #ff9396;
-    color: #ab3c3c;
+    background-color: #ff9396; /* Hover durumunda arka plan rengini değiştirme */
+    color: #ab3c3c; /* Hover durumunda metin rengini beyaz yapma */
 }
 
+/* Sidebar içeriğinin görünümünü buton ile uyumlu hale getirme */
 .custom-sidebar .p-panelmenu {
-    width: 100%;
-    max-height: 80vh;
+    width: 100%; /* Menü genişliği */
+    max-height: 80vh; /* Yüksekliği ekranın %80'i kadar yapar */
 }

@@ -15,8 +15,9 @@ import { SidebarModule } from 'primeng/sidebar';
 })
 export class YanmenuComponent implements OnInit {
   items: MenuItem[] = [];
-  scrollerHeight: string = '200px'; 
-  sidebarVisible: boolean = false; 
+  scrollerHeight: string = '200px'; // Varsayılan yükseklik
+  sidebarVisible: boolean = false; // Sidebar görünürlüğünü kontrol eden özellik
+
   ngOnInit() {
     this.items = [
       this.createMenuItem('Users', 'pi pi-users', [
@@ -79,32 +80,13 @@ export class YanmenuComponent implements OnInit {
         this.createMenuItem('Upcoming'),
         this.createMenuItem('Past Events')
       ]),
-      this.createMenuItem('Settings', 'pi pi-cog', [
-        this.createMenuItem('General'),
-        this.createMenuItem('Account'),
-        this.createMenuItem('Privacy')
-      ]),
-      this.createMenuItem('Tasks', 'pi pi-server', [
-        this.createMenuItem('Add New'),
-        this.createMenuItem('Pending'),
-        this.createMenuItem('Overdue')
-      ]),
-      this.createMenuItem('Notifications', 'pi pi-bell', [
-        this.createMenuItem('All Notifications'),
-        this.createMenuItem('Unread Notifications')
-      ]),
-      this.createMenuItem('Profile', 'pi pi-user', [
-        this.createMenuItem('View Profile'),
-        this.createMenuItem('Edit Profile')
-      ]),
       this.createMenuItem('Calendar', 'pi pi-calendar', [
         this.createMenuItem('Today'),
         this.createMenuItem('Upcoming'),
         this.createMenuItem('Past Events')
-      
       ]),
     ];
-    this.setScrollerHeight(); 
+    this.setScrollerHeight(); // İlk yükseklik ayarı
   }
 
   createMenuItem(label: string, icon?: string, items?: MenuItem[]): MenuItem {
@@ -113,7 +95,7 @@ export class YanmenuComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    this.setScrollerHeight(); 
+    this.setScrollerHeight(); // Pencere boyutu değiştiğinde yüksekliği güncelle
   }
 
   setScrollerHeight() {
